@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fffdf9"
+    tools:context=".activities.profile">
+
+
+
+
+
+        <ImageView
+            android:id="@+id/imvAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+
+            android:src="@drawable/avtnhom">
+
+        </ImageView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/avtduy"
+        app:civ_border_width="1dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-50dp"
+       />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lê Nhật Duy"
+        android:textColor="#F66B0F"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lập trình mobile"
+        android:textColor="#BF967B"
+        android:layout_gravity="center"
+        android:textSize="17sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bài viết của tôi"
+        android:textColor="@color/black"
+        android:layout_gravity="left"
+        android:textSize="17sp"
+        android:textStyle="bold"
+
+        android:layout_margin="15dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <ListView
+        android:id="@+id/lvProNew"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+
+        android:layout_margin="10dp"/>
+
+
+</LinearLayout>

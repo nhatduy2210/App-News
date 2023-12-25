@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bangtin"
+    android:background="#fffdf9"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Chuyển RelativeLayout vào trong NestedScrollView -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fffdf9"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#f2ccb3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Trang chủ"
+                        android:textColor="#005e70"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.Toolbar>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:elevation="10dp"
+                    android:src="@drawable/banner1">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-15dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="195dp"
+                        android:layout_height="150dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/banner3"
+                        android:elevation="10dp"
+                        >
+
+                    </ImageView>
+
+                    <ImageView
+                        android:layout_width="195dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/logo"
+                        android:elevation="10dp">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="Bảng tin gần đây!"
+                    android:textColor="#005e70"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <EditText
+                        android:id="@+id/edtSearch"
+                        android:layout_width="290dp"
+                        android:layout_height="42dp"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="30dp"
+                        android:background="#f2ccb3"
+                        android:drawableLeft="@drawable/baseline_search_24"
+                        android:drawablePadding="10dp"
+                        android:hint="Tìm kiếm"
+                        android:padding="10dp"
+                        android:textColorHint="#CB005E70"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:id="@+id/btnSearch"
+                        android:layout_width="85dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="#f2ccb3"
+                        android:onClick="performSearch"
+                        android:textColor="#005e70"
+                        android:text="Hiện" />
+                </LinearLayout>
+
+
+                <!-- Các thành phần khác -->
+                <ListView
+                    android:id="@+id/lvNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffffff"
+                    android:nestedScrollingEnabled="true" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#f2ccb3"
+        app:menu="@menu/menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

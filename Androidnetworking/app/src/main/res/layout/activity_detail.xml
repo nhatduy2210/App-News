@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+
+    tools:context=".activities.DetailActivity"
+
+    android:background="#fffdf9">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:background="#f2ccb3">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chi tiết"
+            android:textColor="#005e70"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <ImageView
+        android:id="@+id/imvNews"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/avtnhom"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+
+
+            android:text="*Bài viết"
+            android:textColor="#CF3813"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtTieuDe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+
+
+            android:text="Tiêu đề 1 của bảng tin"
+            android:textColor="#024B59"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+
+            android:orientation="vertical">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:text="*Thông tin "
+                android:textStyle="bold"
+                android:textColor="@color/purple_200"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/txtUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:text="Người đăng, "
+                android:textColor="@color/purple_200"
+                android:textSize="17sp"
+               />
+
+            <TextView
+                android:id="@+id/txtTimeUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="time"
+
+                android:textColor="#005e70"
+                android:textSize="17sp"
+               />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+
+
+        android:text="Nội dung"
+        android:textColor="#CF3813"
+        android:paddingLeft="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nội dung của bảng tin"
+        android:textSize="18sp"
+
+        android:layout_margin="10dp"
+        android:textColor="#D2107F95"
+        android:lineHeight="30dp"
+        android:layout_gravity="left"
+        android:textStyle="bold"/>
+
+
+</LinearLayout>

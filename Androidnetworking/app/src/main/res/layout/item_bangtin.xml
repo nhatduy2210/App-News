@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="15dp"
+    android:padding="10dp"
+    android:background="#C4F6EFE0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/link"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtTieuDe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+
+
+                android:text="Tiêu đề 1 của bảng tin"
+                android:textColor="#005e70"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Người đăng:"
+                    android:textColor="@color/black"
+
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+
+
+                    />
+                <TextView
+                    android:id="@+id/txtUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Người đăng, "
+                    android:textSize="13sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/purple_200"
+                    android:layout_gravity="left"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/txtTimeUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="time"
+
+                    android:textColor="#005e70"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nội dung"
+        android:paddingLeft="13dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#CCB10B"
+        android:layout_gravity="left"
+
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+
+        />
+    <TextView
+        android:id="@+id/txtContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nội dung của bảng tin"
+        android:textSize="13sp"
+android:lineHeight="30dp"
+        android:padding="10dp"
+      android:layout_margin="5dp"
+        android:textColor="#005e70"
+        android:layout_gravity="left"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/imvNews"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/avtnhom"/>
+
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bangtin"
+    android:background="#fffdf9"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Chuyển RelativeLayout vào trong NestedScrollView -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fffdf9"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#f2ccb3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Chủ đề"
+                        android:textColor="#005e70"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.Toolbar>
+
+
+
+                <VideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="Tất cả chủ đề!"
+                    android:textColor="#005e70"
+                    android:textSize="21sp"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:id="@+id/horizontalScrollView">
+
+                    <!-- Nơi hiển thị các mục cần cập nhật từ API -->
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp"
+                        android:background="#f2ccb3"
+                        android:padding="10dp">
+
+
+
+                        <!-- Các mục sẽ tự động cập nhật từ API sẽ được thêm vào đây -->
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="Tất cả bảng tin!"
+                    android:textColor="#005e70"
+                    android:textSize="21sp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold" />
+
+
+                <!-- Các thành phần khác -->
+                <ListView
+                    android:id="@+id/lvNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffffff"
+                    android:nestedScrollingEnabled="true" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#f2ccb3"
+        app:menu="@menu/menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

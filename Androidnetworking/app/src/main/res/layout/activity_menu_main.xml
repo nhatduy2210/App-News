@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bangtin"
+    android:background="#fffdf9"
+    android:orientation="vertical">
+
+    <!-- Bottom Navigation View -->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Chuyển RelativeLayout vào trong NestedScrollView -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fffdf9"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <HorizontalScrollView
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content">
+
+                        <!-- Nơi hiển thị các mục cần cập nhật từ API -->
+                        <LinearLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:orientation="horizontal"
+
+                            >
+
+                            <Button
+
+                                android:layout_width="65dp"
+                                android:layout_height="match_parent"
+
+                                android:backgroundTint="#f2ccb3"
+                                android:onClick="performSearch"
+                                android:text="Tất cả"
+                                android:textColor="#000000"
+                                android:textSize="8dp" />
+
+                            <Button
+
+                                android:layout_width="65dp"
+                                android:layout_height="match_parent"
+
+                                android:layout_marginLeft="10dp"
+                                android:backgroundTint="#70D5D5D5"
+                                android:onClick="performSearch"
+                                android:text="List"
+                                android:textColor="#000000"
+                                android:textSize="8dp" />
+
+                            <Button
+
+                                android:layout_width="65dp"
+                                android:layout_height="match_parent"
+
+                                android:layout_marginLeft="10dp"
+                                android:backgroundTint="#70D5D5D5"
+                                android:onClick="performSearch"
+                                android:text="List"
+                                android:textColor="#000000"
+                                android:textSize="8dp" />
+
+                            <Button
+
+                                android:layout_width="65dp"
+                                android:layout_height="match_parent"
+
+                                android:layout_marginLeft="10dp"
+                                android:backgroundTint="#70D5D5D5"
+                                android:onClick="performSearch"
+                                android:text="List"
+                                android:textColor="#000000"
+                                android:textSize="8dp" />
+
+                            <Button
+
+                                android:layout_width="65dp"
+                                android:layout_height="match_parent"
+
+                                android:layout_marginLeft="10dp"
+                                android:backgroundTint="#70D5D5D5"
+                                android:onClick="performSearch"
+                                android:text="List"
+                                android:textColor="#000000"
+                                android:textSize="8dp" />
+
+                            <!-- Các mục sẽ tự động cập nhật từ API sẽ được thêm vào đây -->
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </androidx.appcompat.widget.Toolbar>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                  android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       android:layout_marginRight="5dp"
+                        android:background="#70D5D5D5"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="55dp"
+                            android:layout_marginRight="10dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/banner1">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:lines="2"
+                            android:maxLines="2"
+                            android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                            android:textColor="#005e70"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#70D5D5D5"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="55dp"
+                            android:layout_marginRight="10dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/banner3">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:lines="2"
+                            android:maxLines="2"
+                            android:text="Highlight Comment!"
+
+                            android:textColor="#005e70"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="#70D5D5D5"
+
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="55dp"
+                            android:layout_marginRight="10dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/banner3">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:lines="2"
+                            android:maxLines="2"
+                            android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                            android:textColor="#005e70"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#70D5D5D5"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="55dp"
+                            android:layout_marginRight="10dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/banner1">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:lines="2"
+                            android:maxLines="2"
+                            android:text="Highlight Comment!"
+
+                            android:textColor="#005e70"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="#70D5D5D5"
+
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="55dp"
+                            android:layout_marginRight="10dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/banner1">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:lines="2"
+                            android:maxLines="2"
+                            android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                            android:textColor="#005e70"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#70D5D5D5"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="55dp"
+                            android:layout_marginRight="10dp"
+                            android:elevation="10dp"
+                            android:src="@drawable/banner3">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="85dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:lines="2"
+                            android:maxLines="2"
+                            android:text="Highlight Comment!"
+
+                            android:textColor="#005e70"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="Khám phá gần đây!"
+                    android:textColor="#005e70"
+                    android:textSize="18sp"
+                    android:layout_margin="12dp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <!-- Nơi hiển thị các mục cần cập nhật từ API -->
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                           >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/avtduy">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/avtduy">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/avtduy">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/avtduy">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <!-- Các mục sẽ tự động cập nhật từ API sẽ được thêm vào đây -->
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="Có thể bạn muốn biết!"
+                    android:textColor="#005e70"
+                    android:textSize="18sp"
+                    android:layout_margin="12dp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <!-- Nơi hiển thị các mục cần cập nhật từ API -->
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/test">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/test">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/test">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/test">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <!-- Các mục sẽ tự động cập nhật từ API sẽ được thêm vào đây -->
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <!-- Các thành phần khác -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="Cuốn sách gợi ý cho bạn!"
+                    android:textColor="#005e70"
+                    android:textSize="18sp"
+                    android:layout_margin="12dp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <!-- Nơi hiển thị các mục cần cập nhật từ API -->
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/avtduy">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/avtduy">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/avtduy">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/avtduy">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:text="Khám phá gần đây!"
+                            android:textColor="#005e70"
+                            android:textSize="18sp"
+                            android:layout_margin="12dp"
+                            android:textStyle="bold" />
+
+                        <HorizontalScrollView
+
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content">
+
+                            <!-- Nơi hiển thị các mục cần cập nhật từ API -->
+                            <LinearLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+
+                                    android:orientation="vertical"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="100dp"
+                                        android:layout_height="125dp"
+                                        android:layout_marginRight="10dp"
+                                        android:elevation="10dp"
+                                        android:src="@drawable/avtduy">
+
+                                    </ImageView>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+
+                                        android:lines="2"
+                                        android:maxLines="2"
+                                        android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                        android:textColor="#005e70"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+
+                                    android:orientation="vertical"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="100dp"
+                                        android:layout_height="125dp"
+                                        android:layout_marginRight="10dp"
+                                        android:elevation="10dp"
+                                        android:src="@drawable/avtduy">
+
+                                    </ImageView>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+
+                                        android:lines="2"
+                                        android:maxLines="2"
+                                        android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                        android:textColor="#005e70"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+
+                                    android:orientation="vertical"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="100dp"
+                                        android:layout_height="125dp"
+                                        android:layout_marginRight="10dp"
+                                        android:elevation="10dp"
+                                        android:src="@drawable/avtduy">
+
+                                    </ImageView>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+
+                                        android:lines="2"
+                                        android:maxLines="2"
+                                        android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                        android:textColor="#005e70"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+
+                                    android:orientation="vertical"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="100dp"
+                                        android:layout_height="125dp"
+                                        android:layout_marginRight="10dp"
+                                        android:elevation="10dp"
+                                        android:src="@drawable/avtduy">
+
+                                    </ImageView>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+
+                                        android:lines="2"
+                                        android:maxLines="2"
+                                        android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                        android:textColor="#005e70"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <!-- Các mục sẽ tự động cập nhật từ API sẽ được thêm vào đây -->
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+
+                        <!-- Các mục sẽ tự động cập nhật từ API sẽ được thêm vào đây -->
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:text="Khám phá gần đây!"
+                    android:textColor="#005e70"
+                    android:textSize="18sp"
+                    android:layout_margin="12dp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <!-- Nơi hiển thị các mục cần cập nhật từ API -->
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/avtduy">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/avtduy">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/avtduy">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="125dp"
+                                android:layout_marginRight="10dp"
+                                android:elevation="10dp"
+                                android:src="@drawable/avtduy">
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="Chủ đề âm nhạc và hội hoạ!"
+
+                                android:textColor="#005e70"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <!-- Các mục sẽ tự động cập nhật từ API sẽ được thêm vào đây -->
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#f2ccb3"
+        app:menu="@menu/menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

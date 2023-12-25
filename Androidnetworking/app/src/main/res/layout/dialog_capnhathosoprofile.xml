@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Login"
+    android:background="#5748484A"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:text="Cập nhật thông tin"
+        android:textColor="#018AA6"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+android:layout_marginTop="5dp"
+        android:src="@drawable/avtnhom">
+
+    </ImageView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/avtduy"
+        app:civ_border_width="1dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-50dp"
+        />
+    <EditText
+        android:id="@+id/edtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:hint="Lê Nhật Duy"
+
+        android:drawablePadding="20dp"
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/edtPassWord"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:inputType="textPassword"
+
+        android:drawablePadding="20dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+
+        android:hint="Lập trình mobile"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/edtRePassWord"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:inputType="textPassword"
+
+        android:drawablePadding="20dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+
+        android:hint="2x/xx/xxxx"
+        android:textSize="20dp" />
+
+
+
+        <Button
+
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Lưu"
+            android:onClick="onLoginCLick"
+            android:backgroundTint="#018AA6"
+android:layout_marginTop="10dp"
+            android:textColor="@color/white"/>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

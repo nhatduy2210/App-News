@@ -1,0 +1,36 @@
+<!-- res/menu/bottom_navigation_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/png_home"
+        android:textColor="#005e70"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/action_detail"
+        android:icon="@drawable/png_detail"
+        android:textColor="#005e70"
+        android:title="Chi tiết" />
+
+    <item
+        android:id="@+id/action_prof"
+        android:icon="@drawable/png_profile"
+        android:textColor="#005e70"
+        android:title="Profile" />
+
+
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/baseline_search_24"
+        android:textColor="#005e70"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/action_out"
+        android:icon="@drawable/png_out"
+        android:textColor="#005e70"
+        android:title="Out" />
+</menu>

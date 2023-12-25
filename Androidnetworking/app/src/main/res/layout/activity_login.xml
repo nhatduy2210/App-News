@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity"
+    android:orientation="vertical"
+    android:background="#FFFDF9"
+    android:padding="20dp">
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+            >
+
+        </ImageView>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:text="Đăng nhập"
+        android:textStyle="bold"
+        android:textColor="#005e70"
+        android:textSize="30sp"/>
+    <EditText
+        android:id="@+id/edtEmailLogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:hint="Email"
+        android:textColorHint="#024B59"
+        android:drawableLeft="@drawable/png_email"
+        android:textColor="#024B59"
+        android:drawablePadding="10dp"
+        android:textSize="20dp"
+        android:background="#75D5F7FD"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/edtPassWordLogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/png_pass"
+        android:drawablePadding="9dp"
+        android:textColorHint="#024B59"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="10dp"
+        android:drawableRight="@drawable/hint"
+        android:layout_marginLeft="10dp"
+        android:textColor="#024B59"
+        android:background="#75D5F7FD"
+        android:padding="10dp"
+        android:hint="Mật khẩu"
+        android:textSize="20dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REMEMBER ME?"
+            android:textSize="11sp"
+            android:textColor="#024B59"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtForgotPassWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#024B59"
+            android:onClick="For"
+            android:text="Quên mật khẩu?"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.466" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+
+            android:id="@+id/btnLogin"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:text="Đăng nhập"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:onClick="onLoginSubmit"
+            android:backgroundTint="#005e70"
+
+            android:textColor="@color/white"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chưa có tài khoản Study Bee?"
+            android:textColor="#024B59"
+            android:textStyle="bold"
+android:layout_marginRight="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.609"
+            tools:layout_editor_absoluteX="52dp" />
+
+        <Button
+            android:id="@+id/btnRes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#005e70"
+            android:onClick="onLoadRegisterScreen"
+            android:text="Đăng ký"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.887"
+
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

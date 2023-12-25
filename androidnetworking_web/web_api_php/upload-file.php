@@ -1,0 +1,34 @@
+<?php 
+    header("Content-Type: application/json; charset=UTF-8");
+    header("Access-Control-Allow-Methods: POST");
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Max-Age: 3600");
+    header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+    
+    // http://127.0.0.1:8686/upload-file.php
+    //http:// 172.16.116.203:8686/uploads/
+
+    try {
+        $currentDirectory = getcwd();
+        $uploadDirectory = "/uploads/";
+        $fileName = $_FILES['image']['name'];
+        $fileTmpName  = $_FILES['image']['tmp_name'];
+        $uploadPath = $currentDirectory . $uploadDirectory . basename($fileName);
+        // upload file
+        move_uploaded_file($fileTmpName, $uploadPath);
+        echo json_encode(
+            array(
+                "error" => false,
+                "message" => "Upload successful",
+                "path" => "http://172.16.122.209:8686/uploads/".$fileName
+            )
+        );
+    } catch (Exception $e) {
+        echo json_encode(
+            array(
+                "error" => true,
+                "message" => "Upload failed",
+                "path" => null
+            )
+        );
+    }
